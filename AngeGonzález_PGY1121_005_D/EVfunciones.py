@@ -103,14 +103,13 @@ def grabarJugador(jugadores):
 def buscarParticipante(jugadores):
     if len(jugadores) != 0:
         rut = validarRut("Ingrese su rut de participante a busca > ",5000000,90000000)
-        for i in range(len(jugadores)):
-            for j in jugadores:
-                if j[0] == rut:
-                    print("Jugador encontrado!")
-                    print(f"NOMBRE : {j[1]}")
-                    print(f"CATEGORIA : {j[3]}")
-                    print(f"FONO : {j[4]}")
-                    print(f"CORREO : {j[5]}")
+        for j in jugadores:
+            if j[0] == rut:
+                print("Jugador encontrado!")
+                print(f"NOMBRE : {j[1]}")
+                print(f"CATEGORIA : {j[3]}")
+                print(f"FONO : {j[4]}")
+                print(f"CORREO : {j[5]}")
     else:
         print("La lista de jugadores está vacía")
 
@@ -120,9 +119,8 @@ def buscarParticipante(jugadores):
 def imprimirPareja(jugadores):
     if len(jugadores) != 0:
         id_pareja = validarLen(str,"Ingrese nombre de grupo > ",2)
-        for i in range(len(jugadores)):
-            for j in jugadores:
-                if j[6] == id_pareja:
-                    print(f"NOMBRE : {j[1]}")
+        for j in jugadores:
+            if j[6] == id_pareja:
+                print(f"NOMBRE : {j[1]}")
     else:
         print("La lista de jugadores está vacía")
